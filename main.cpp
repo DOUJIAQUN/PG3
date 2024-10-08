@@ -2,7 +2,7 @@
 
 int main() {
 
-	printf("2ewk,ああああ");
+	printf("こんにちは");
 
 	return 0;
 }
