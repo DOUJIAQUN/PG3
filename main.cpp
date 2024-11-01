@@ -1,20 +1,20 @@
-//#include <iostream>
-#include <stdio.h>
-#include "Enemy.h"
-// PG proj
-// LE2A_06_オザワ
+#include <iostream>
+
+#include "MyClass.h"
+
 
 int main() {
 
-	Enemy* enemy = new Enemy;
-	enemy->Initialize();
+	MyClass<int, int>		intXint(8, 256);
+	MyClass<int, float>		intXfloat(8, 25.6f);
+	MyClass<int, double>	intXdouble(8, 2.56);
 
-	while (!enemy->IsLeave())
-	{
-		enemy->Update();
-	}
+	MyClass<float, float>	floatXfloat(0.8f, 25.6f);
+	MyClass<float, double>	floatXdouble(0.8f, 2.56);
 
-	delete enemy;
+	MyClass<double, double>	doubleXdouble(0.8, 2.56);
+
+
 
 	return 0;
 }
