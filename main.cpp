@@ -1,8 +1,25 @@
-#include<stdio.h>
+#include <iostream>
+#include "Circle.h"
+#include "Rectangle.h"
 
-int main() {
+int main()
+{
+    IShape* shape[2];
 
-	printf("2ewk,ああああ");
+    float radius = 7.0f;
 
-	return 0;
+    float width = 5.0f;
+    float height = 3.0f;
+
+    shape[0] = new Circle(radius);
+    shape[1] = new Rectangle(width, height);
+
+    for (int i = 0; i < 2; i++) {
+        shape[i]->Size();
+        shape[i]->Draw();
+    }
+
+    for (int i = 0; i < 2; i++) {
+        delete shape[i];
+    }
 }
